@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android_port_test">
-
+    <uses-feature android:name="android.hardware.usb.host"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidPortTest">
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -17,8 +20,6 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
 
-                <meta-data android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
-                    android:resource="@xml/accessory_filter" />
             </intent-filter>
         </activity>
     </application>

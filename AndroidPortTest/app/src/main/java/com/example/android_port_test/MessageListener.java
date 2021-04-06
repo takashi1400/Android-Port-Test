@@ -20,7 +20,8 @@ public abstract class MessageListener {
 
     private final Runnable mAcceptTask = new Runnable() {
         public void run() {
-            android.os.Debug.waitForDebugger();
+
+            //別スレッドでデバッグする場合このコードをonに android.os.Debug.waitForDebugger();
             final ServerSocket serverSocket;
 
             try {
